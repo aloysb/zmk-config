@@ -48,6 +48,13 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 32 33 34>;
         };
+        tp: tap_preferred_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;    // <---[[moderate duration]]
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
     combos {
         compatible = "zmk,combos";
@@ -64,9 +71,9 @@
       display-name="Base";
       bindings = <
       // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-          &kp Q          &kp W          &mt LHYPR F    &kp P          &kp B            &kp J          &kp L          &mt RHYPR U    &kp Y          &kp APOS
+          &kp Q          &kp W          &tp LHYPR F    &kp P          &kp B            &kp J          &kp L          &tp RHYPR U    &kp Y          &kp APOS
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-          &hml LCTRL A   &hml LALT R    &hml LGUI S    &hml LSHFT T   &mt LMEH G       &mt RMEH M     &hmr RSHFT N   &hmr RGUI N    &hmr RALT E    &hmr RCTRL O
+          &hml LCTRL A   &hml LALT R    &hml LGUI S    &hml LSHFT T   &tp LMEH G       &tp RMEH M     &hmr RSHFT N   &hmr RGUI E    &hmr RALT E    &hmr RCTRL O
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
           &kp Z          &kp X          &kp C          &kp V          &kp B            &kp K          &kp H          &kp COMMA      &kp DOT        &kp FSLH
       // ╰──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╯
@@ -94,9 +101,9 @@
       display-name="Sym";
       bindings = <
       // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-          &kp NUHS       &kp LBKT       &kp EQUAL      &kp RBKT       &kp BSLH          &none          &kp RHYPR      &none          &none          &none
+          &kp NUHS       &kp LBKT       &kp EQUAL      &kp RBKT       &kp BSLH          &none         &none          &kp RHYPR     &none          &none
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-          &kp CARET      &kp LPAR       &kp SEMI       &kp RPAR       &kp ASTRK         &kp RMEH       &kp RSHFT      &kp RGUI       &kp RALT       &kp RCTRL
+          &kp CARET      &kp LPAR       &kp SEMI       &kp RPAR       &kp ASTRK         &kp RMEH       &kp RSHFT     &kp RGUI       &kp RALT       &kp RCTRL
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
           &kp AT         &kp DLLR       &kp MINUS      &kp EXCL       &kp PRCNT         &none          &none          &none          &none          &none 
       // ╰──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╯
@@ -109,7 +116,7 @@
       display-name="Num";
       bindings = <
       // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-          &kp ASTRK      &kp N7         &kp N8         &kp N9         &kp PLUS          &none          &kp RHYPR      &none          &none          &none
+          &kp ASTRK      &kp N7         &kp N8         &kp N9         &kp PLUS          &none          &none         &kp RHYPR          &none          &none
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
           &kp FSLH       &kp N4         &kp N5         &kp N6         &kp EQUAL         &kp RMEH       &kp RSHFT      &kp RGUI       &kp RALT       &kp RCTRL
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
