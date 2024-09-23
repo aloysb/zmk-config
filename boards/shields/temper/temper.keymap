@@ -73,15 +73,14 @@
       // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
           &kp Q          &kp W          &tp LHYPR F    &kp P          &kp B            &kp J          &kp L          &tp RHYPR U    &kp Y          &kp APOS
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-          &hml LCTRL A   &hml LALT R    &hml LGUI S    &hml LSHFT T   &tp LMEH G       &tp RMEH M     &hmr RSHFT N   &hmr RGUI E    &hmr RALT E    &hmr RCTRL O
+          &hml LCTRL A   &hml LALT R    &hml LGUI S    &hml LSHFT T   &tp LMEH G       &tp RMEH M     &hmr RSHFT N   &hmr RGUI E    &hmr RALT I    &hmr RCTRL O
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-          &kp Z          &kp X          &kp C          &kp V          &kp B            &kp K          &kp H          &kp COMMA      &kp DOT        &kp FSLH
+          &kp Z          &kp X          &kp C          &kp D          &kp V            &kp K          &kp H          &kp COMMA      &kp DOT        &kp FSLH
       // ╰──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╯
                                         &lt SYS ESC    &lt NAV SPACE  &lt NUM TAB      &lt SYM RET    &kp BKSP       &kp DEL
       //                               ╰──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────╯
       >;
     };
-
     nav_layer {
       display-name="Nav";
       bindings = <
