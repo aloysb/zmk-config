@@ -30,7 +30,7 @@
 
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS SPACE DELETE>;
+    continue-list = <UNDERSCORE MINUS SPACE DELETE BACKSPACE>;
 };
 
 / {
@@ -38,7 +38,7 @@
         hml: balanced_homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <180>;  
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -47,7 +47,7 @@
         hmr: balanced_homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            tapping-term-ms = <180>;   
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -56,23 +56,103 @@
         tp: tap_preferred_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;    // <---[[moderate duration]]
+            tapping-term-ms = <180>;    
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
     combos {
         compatible = "zmk,combos";
-        caps_words_combo {
+        // Vertical Top row + Home row
+        // Left
+     
+      left_bracket_combo {
             timeout-ms = <50>;
             key-positions = <1 11>;
-            bindings = <&caps_word>;
+            bindings = <&kp LBKT>;
+            layers = <0>;
+        };
+       left_brace_combo {
+            timeout-ms = <50>;
+            key-positions = <2 12>;
+            bindings = <&kp LBRC>;
+            layers = <0>;
+        };
+       left_paren_combo {
+            timeout-ms = <50>;
+            key-positions = <3 13>;
+            bindings = <&kp LPAR>;
+            layers = <0>;
+        };
+       lt_combo {
+            timeout-ms = <50>;
+            key-positions = <4 14>;
+            bindings = <&kp LT>;
+            layers = <0>;
+        };
+        // Right
+       gt_combo {
+            timeout-ms = <50>;
+            key-positions = <5 15>;
+            bindings = <&kp GT>;
+            layers = <0>;
+        };
+       right_paren_combo {
+            timeout-ms = <50>;
+            key-positions = <6 16>;
+            bindings = <&kp RPAR>;
+            layers = <0>;
+        };
+       right_brace_combo {
+            timeout-ms = <50>;
+            key-positions = <7 17>;
+            bindings = <&kp RBRC>;
+            layers = <0>;
+        };
+       right_bracket_combo {
+            timeout-ms = <50>;
+            key-positions = <8 18>;
+            bindings = <&kp RBKT>;
+            layers = <0>;
+        };
+
+      // Vertial Home row + bottom
+       minus_combo {
+            timeout-ms = <50>;
+            key-positions = <12 22>;
+            bindings = <&kp MINUS>;
+            layers = <0>;
+        };
+       underscore_combo {
+            timeout-ms = <50>;
+            key-positions = <14 24>;
+            bindings = <&kp UNDERSCORE>;
+            layers = <0>;
+        };
+       equal_combo {
+            timeout-ms = <50>;
+            key-positions = <15 25>;
+            bindings = <&kp EQUAL>;
+            layers = <0>;
         };
         vim_command_combo {
             timeout-ms = <50>;
-            key-positions = <5 15>;
+            key-positions = <16 26>;
             bindings = <&kp COLON>;
             layers = <0>;
+        };
+       plus_combo {
+            timeout-ms = <50>;
+            key-positions = <17 27>;
+            bindings = <&kp PLUS>;
+            layers = <0>;
+        };
+
+      // Horizontal
+        caps_words_combo {
+            timeout-ms = <50>;
+            key-positions = <0 10>;
+            bindings = <&caps_word>;
         };
     };
 
