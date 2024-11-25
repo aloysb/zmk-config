@@ -148,11 +148,87 @@
             layers = <0>;
         };
 
+
       // Horizontal
         caps_words_combo {
             timeout-ms = <50>;
             key-positions = <0 10>;
             bindings = <&caps_word>;
+        };
+
+        // Set up mods combo - note: there is probably a better way to do this
+        // Left hand combos - Basic dual combinations
+        combo_left_ctrl_opt {
+            timeout-ms = <50>;
+            key-positions = <10 11>; // A + R (Ctrl + Opt)
+            bindings = <&kp LCTRL &kp LALT>;
+        };
+        
+        combo_left_ctrl_cmd {
+            timeout-ms = <50>;
+            key-positions = <10 12>; // A + S (Ctrl + Cmd)
+            bindings = <&kp LCTRL &kp LCMD>;
+        };
+        
+        combo_left_ctrl_shift {
+            timeout-ms = <50>;
+            key-positions = <10 13>; // A + T (Ctrl + Shift)
+            bindings = <&kp LCTRL &kp LSHIFT>;
+        };
+        
+        combo_left_opt_cmd {
+            timeout-ms = <50>;
+            key-positions = <11 12>; // R + S (Opt + Cmd)
+            bindings = <&kp LALT &kp LCMD>;
+        };
+        
+        combo_left_opt_shift {
+            timeout-ms = <50>;
+            key-positions = <11 13>; // R + T (Opt + Shift)
+            bindings = <&kp LALT &kp LSHIFT>;
+        };
+        
+        combo_left_cmd_shift {
+            timeout-ms = <50>;
+            key-positions = <12 13>; // S + T (Cmd + Shift)
+            bindings = <&kp LCMD &kp LSHIFT>;
+        };
+        
+        // Right hand combos - Basic dual combinations
+        combo_right_shift_cmd {
+            timeout-ms = <50>;
+            key-positions = <16 17>; // N + E (Shift + Cmd)
+            bindings = <&kp RSHIFT &kp RCMD>;
+        };
+        
+        combo_right_shift_opt {
+            timeout-ms = <50>;
+            key-positions = <16 18>; // N + I (Shift + Opt)
+            bindings = <&kp RSHIFT &kp RALT>;
+        };
+        
+        combo_right_shift_ctrl {
+            timeout-ms = <50>;
+            key-positions = <16 19>; // N + O (Shift + Ctrl)
+            bindings = <&kp RSHIFT &kp RCTRL>;
+        };
+        
+        combo_right_cmd_opt {
+            timeout-ms = <50>;
+            key-positions = <17 18>; // E + I (Cmd + Opt)
+            bindings = <&kp RCMD &kp RALT>;
+        };
+        
+        combo_right_cmd_ctrl {
+            timeout-ms = <50>;
+            key-positions = <17 19>; // E + O (Cmd + Ctrl)
+            bindings = <&kp RCMD &kp RCTRL>;
+        };
+        
+        combo_right_opt_ctrl {
+            timeout-ms = <50>;
+            key-positions = <18 19>; // I + O (Opt + Ctrl)
+            bindings = <&kp RALT &kp RCTRL>;
         };
     };
 
@@ -168,7 +244,7 @@
       // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
           &kp Z          &kp X          &kp C          &kp D          &kp V            &kp K          &kp H          &kp COMMA      &kp DOT        &kp FSLH
       // ╰──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╯
-                                        &lt SYS ESC    &lt NAV SPACE  &lt NUM TAB      &lt SYM RET    &kp BKSP       &kp DEL
+                                        &lt SYS ESC    &lt NAV BKSP  &lt NUM TAB      &lt SYM RET    &kp SPACE       &kp DEL
       //                               ╰──────────────┴──────────────┴──────────────╯ ╰──────────────┴──────────────┴──────────────╯
       >;
     };
