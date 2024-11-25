@@ -1,5 +1,5 @@
 layers:
-  default:
+  Base:
   - - Q
     - W
     - {t: F, h: Ctl+Sft+ ⎇}
@@ -30,13 +30,13 @@ layers:
     - {t: ',', s: <}
     - {t: ., s: '>'}
     - /
-  - - {t: ESC, h: sys}
-    - {t: SPACE, h: nav}
-    - {t: ↹, h: numbers}
-    - {t: RET, h: symbols}
-    - BKSP
+  - - {t: ESC, h: Sys}
+    - {t: BKSP, h: Nav}
+    - {t: ↹, h: Num}
+    - {t: RET, h: Sym}
+    - SPACE
     - DEL
-  nav:
+  Nav:
   - ['', '', Ctl+Sft+ ⎇, '', '', ↓, →, PG DN, '', '']
   - [⌃, ⎇, ⌘, ⇧, Meh+ ⌘, HOME, END, '', '', '']
   - ['', '', '', '', '', ↑, ←, PG UP, '', '']
@@ -46,7 +46,7 @@ layers:
     - RET
     - BKSP
     - DEL
-  symbols:
+  Sym:
   - - {t: '`', s: '~'}
     - {t: '[', s: '{'}
     - {t: '=', s: +}
@@ -83,7 +83,7 @@ layers:
     - {t: RET, type: held}
     - BKSP
     - DEL
-  numbers:
+  Num:
   - ['', '', Ctl+Sft+ ⎇, '', '', +, KP 7, KP 8, KP 9, '*']
   - - Meh+ ⌘
     - ⇧
@@ -111,7 +111,7 @@ layers:
     - {t: ',', s: <}
     - KP 0
     - {t: ., s: '>'}
-  sys:
+  Sys:
   - ['', '', Ctl+Sft+ ⎇, '', '', VOL DN, BRI UP, '', '', '']
   - [⌃, ⎇, ⌘, ⇧, Meh+ ⌘, Ctl+Sft+AGr+ ⌘, ←, ↓, ↑, →]
   - - ''
@@ -135,42 +135,66 @@ layers:
 combos:
 - p: [1, 11]
   k: {t: '[', s: '{'}
-  l: [default]
+  l: [Base]
 - p: [2, 12]
   k: '{'
-  l: [default]
+  l: [Base]
 - p: [3, 13]
   k: (
-  l: [default]
+  l: [Base]
 - p: [4, 14]
   k: <
-  l: [default]
+  l: [Base]
 - p: [5, 15]
   k: '>'
-  l: [default]
+  l: [Base]
 - p: [6, 16]
   k: )
-  l: [default]
+  l: [Base]
 - p: [7, 17]
   k: '}'
-  l: [default]
+  l: [Base]
 - p: [8, 18]
   k: {t: ']', s: '}'}
-  l: [default]
+  l: [Base]
 - p: [12, 22]
   k: {t: '-', s: _}
-  l: [default]
+  l: [Base]
 - p: [14, 24]
   k: _
-  l: [default]
+  l: [Base]
 - p: [15, 25]
   k: {t: '=', s: +}
-  l: [default]
+  l: [Base]
 - p: [16, 26]
   k: ':'
-  l: [default]
+  l: [Base]
 - p: [17, 27]
   k: +
-  l: [default]
+  l: [Base]
 - p: [0, 10]
   k: ⇪
+- p: [10, 11]
+  k: ⌃
+- p: [10, 12]
+  k: ⌃
+- p: [10, 13]
+  k: ⌃
+- p: [11, 12]
+  k: ⎇
+- p: [11, 13]
+  k: ⎇
+- p: [12, 13]
+  k: LCMD
+- p: [16, 17]
+  k: RSHIFT
+- p: [16, 18]
+  k: RSHIFT
+- p: [16, 19]
+  k: RSHIFT
+- p: [17, 18]
+  k: RCMD
+- p: [17, 19]
+  k: RCMD
+- p: [18, 19]
+  k: ⎇
