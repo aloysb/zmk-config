@@ -2,20 +2,20 @@ layers:
   Base:
   - - Q
     - W
-    - {t: F, h: Ctl+Sft+ ⎇}
+    - {t: F, h: Ctl+Sft+⎇}
     - P
     - B
     - J
     - L
-    - {t: U, h: Ctl+Sft+ ⎇}
+    - {t: U, h: Ctl+Sft+⎇}
     - Y
     - {t: '''', s: '"'}
   - - {t: A, h: ⌃}
     - {t: R, h: ⎇}
     - {t: S, h: ⌘}
     - {t: T, h: ⇧}
-    - {t: G, h: Meh+ ⌘}
-    - {t: M, h: Ctl+Sft+AGr+ ⌘}
+    - {t: G, h: Meh+⌘}
+    - {t: M, h: Ctl+Sft+AltGr+⌘}
     - {t: N, h: ⇧}
     - {t: E, h: ⌘}
     - {t: I, h: ⎇}
@@ -37,8 +37,8 @@ layers:
     - SPACE
     - DEL
   Nav:
-  - ['', '', Ctl+Sft+ ⎇, '', '', ↓, →, PG DN, '', '']
-  - [⌃, ⎇, ⌘, ⇧, Meh+ ⌘, HOME, END, '', '', '']
+  - ['', '', Ctl+Sft+⎇, '', '', ↓, →, PG DN, '', '']
+  - [⌃, ⎇, ⌘, ⇧, Meh+⌘, HOME, END, '', '', '']
   - ['', '', '', '', '', ↑, ←, PG UP, '', '']
   - - ESC
     - {type: held}
@@ -54,7 +54,7 @@ layers:
     - \
     - ''
     - ''
-    - Ctl+Sft+ ⎇
+    - Ctl+Sft+⎇
     - ''
     - ''
   - - ^
@@ -62,7 +62,7 @@ layers:
     - {t: ;, s: ':'}
     - )
     - '*'
-    - Ctl+Sft+AGr+ ⌘
+    - Ctl+Sft+AltGr+⌘
     - ⇧
     - ⌘
     - ⎇
@@ -84,8 +84,8 @@ layers:
     - BKSP
     - DEL
   Num:
-  - ['', '', Ctl+Sft+ ⎇, '', '', +, KP 7, KP 8, KP 9, '*']
-  - - Meh+ ⌘
+  - ['', '', Ctl+Sft+⎇, '', '', +, KP 7, KP 8, KP 9, '*']
+  - - Meh+⌘
     - ⇧
     - ⌘
     - ⎇
@@ -112,8 +112,8 @@ layers:
     - KP 0
     - {t: ., s: '>'}
   Sys:
-  - ['', '', Ctl+Sft+ ⎇, '', '', VOL DN, BRI UP, '', '', '']
-  - [⌃, ⎇, ⌘, ⇧, Meh+ ⌘, Ctl+Sft+AGr+ ⌘, ←, ↓, ↑, →]
+  - ['', '', Ctl+Sft+⎇, '', '', VOL DN, BRI UP, '', '', '']
+  - [⌃, ⎇, ⌘, ⇧, Meh+⌘, Ctl+Sft+AltGr+⌘, ←, ↓, ↑, →]
   - - ''
     - {t: BT, h: '0'}
     - {t: BT, h: '1'}
