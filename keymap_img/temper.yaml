@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: temper}
 layers:
   Base:
   - - Q
@@ -112,7 +113,7 @@ layers:
     - KP 0
     - {t: ., s: '>'}
   Sys:
-  - ['', '', Ctl+Sft+⎇, '', '', VOL DN, BRI UP, '', '', '']
+  - [BT CLR ALL, '', Ctl+Sft+⎇, '', '', VOL DN, BRI UP, '', '', '']
   - [⌃, ⎇, ⌘, ⇧, Meh+⌘, Ctl+Sft+AltGr+⌘, ←, ↓, ↑, →]
   - - ''
     - {t: BT, h: '0'}
